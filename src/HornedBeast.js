@@ -16,24 +16,13 @@ class HornedBeast extends React.Component {
   }
   render() {
     return (
-      <Card style={{ width: '18rem' }}>
-        <Card.Title>{this.props.title}</Card.Title>
-        <Card.Img
-        src={this.props.imageUrl}
-        alt={this.props.title}
-        title={this.props.description}
-        onClick={this.favoriteImages}/>
-        <Card.Body>
-          <Card.Text>{this.props.description}</Card.Text>
-          <Card.Text> 💛 {this.state.votesOfImages}</Card.Text>
-        </Card.Body>
-      </Card>
-
+      <div>
+        <h2>{this.props.title}</h2>
+        <img src={this.props.imgUrl} alt={this.props.title} title ={this.props.description}/> 
+        <p>{this.props.description}</p>
+      </div>
     )
   }
 }
 
 export default HornedBeast;
-
-
-

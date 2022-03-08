@@ -6,15 +6,12 @@ import Footer from "./Footer";
 
 class App extends React.Component {
   render() {
-
-
     return (
       <div className="App">
         <p></p>
         <Header />
         <Main />
         <Footer />
-
       </div>
     );
   }
