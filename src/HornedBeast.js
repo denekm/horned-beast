@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card';
 
 class HornedBeast extends React.Component {
   constructor(props) {
@@ -8,26 +8,27 @@ class HornedBeast extends React.Component {
       votesOfImages: 0
     }
   }
-  favoriteImages = () => {
-    this.setState({
-      votesOfImages: this.state.votesOfImages + 1
-    })
-  }
+  // favoriteImages = () => {
+  //   this.setState({
+  //     votesOfImages: this.state.votesOfImages + 1
+  //   })
+  // }
   render() {
     return (
       <Card style={{ width: '18rem' }}>
+           <Card.Body>
         <Card.Title>{this.props.title}</Card.Title>
-        <Card.Img
-        src={this.props.imageUrl}
-        alt={this.props.title}
-        title={this.props.description}
-        onClick={this.favoriteImages}/>
-        <Card.Body>
+          <Card.Img
+            src={this.props.imageUrl}
+            alt={this.props.title}
+            title={this.props.description}
+            // onClick={this.favoriteImages}
+             />
           <Card.Text>{this.props.description}</Card.Text>
           <Card.Text> 💛 {this.state.votesOfImages}</Card.Text>
         </Card.Body>
       </Card>
-  
+
     )
   }
 }
