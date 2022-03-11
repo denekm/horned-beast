@@ -13,7 +13,7 @@ class HornedBeast extends React.Component {
     this.setState({
       votesOfImages: this.state.votesOfImages + 1
     });
-    this.props.handesClose();
+    this.props.handlesShow(this.props.title);
   }
   render() {
     return (
