@@ -2,11 +2,13 @@ import React from 'react';
 import HornedBeast from './HornedBeast.js';
 import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
+import FilterForm from './FilterForm.js';
 
 class Main extends React.Component {
   render() {
     return (
       <>
+      <FilterForm handleFilterArr={this.props.handleFilterArr}/>
         <Row>
           {this.props.allBeasts.map((beast, idx) => (
             <HornedBeast
